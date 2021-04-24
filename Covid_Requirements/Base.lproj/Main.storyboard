@@ -32,11 +32,34 @@
                                     <action selector="optionBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOU-ZS-bed"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LS-5b-kHY">
+                                <rect key="frame" x="159" y="120" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg3-Zz-UO0">
+                                <rect key="frame" x="317" y="71" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vaccines"/>
+                                <connections>
+                                    <action selector="vaccineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCF-IY-eNm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w59-AP-Kgk">
+                                <rect key="frame" x="190" y="71" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Beds"/>
+                                <connections>
+                                    <action selector="bedsBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Atc-Ng-v9e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="cityLbl" destination="8LS-5b-kHY" id="SAL-yq-2nD"/>
                         <outlet property="optionBtn" destination="zTq-c7-9Es" id="2Uu-Pf-DIJ"/>
                     </connections>
                 </viewController>
