@@ -10,7 +10,6 @@ import SwifteriOS
 class ViewController: UIViewController {
     var resultArr=[String]()
     var uriArr=[String]()
-    var result:Results?
     var buttonTapped=false
     var flagR=0
     let swifter = Swifter(consumerKey:Constants.API_KEY,consumerSecret:Constants.API_SECRET)
@@ -20,9 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bedBtn: UIButton!
     @IBOutlet weak var vaccineBtn: UIButton!
     override func viewDidLoad() {
-        if let path = Bundle.main.path(forResource: "keys", ofType: "plist"){
-            
-        }
+        self.cityLbl.delegate = self
         content.delegate=self
         content.dataSource=self
         super.viewDidLoad()
@@ -122,12 +119,6 @@ class ViewController: UIViewController {
   
 }
 
-struct Results:Codable{
-    let data:[ResultItem]
-}
-struct ResultItem:Codable{
-    let text:String
-}
 //MARK: Interaction of cells
 extension ViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -146,5 +137,12 @@ extension ViewController:UITableViewDataSource{
         print(resultArr)
         cell.textLabel?.text=resultArr[indexPath.row]
         return cell
+    }
+}
+//MARK: TEXT FIELD
+extension ViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+              return false
     }
 }
