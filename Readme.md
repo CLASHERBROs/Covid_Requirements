@@ -6,11 +6,11 @@
 
 ## Screenshots
 
-![screen one](/screenshots/1.png?raw=true)
-![screen one](/screenshots/2.png?raw=true)
-![screen one](/screenshots/3.png?raw=true)
-![screen one](/screenshots/4.png?raw=true)
-![screen one](/screenshots/5.png?raw=true)
+<img src="/screenshots/1.png" width="50%">
+<img src="/screenshots/2.png" width="50%">
+<img src="/screenshots/3.png" width="50%">
+<img src="/screenshots/4.png" width="50%">
+<img src="/screenshots/5.png" width="50%">
 
 ## Pending Work
 
