@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreML
 import SwifteriOS
 class ViewController: UIViewController {
     var resultArr=[String]()
     var uriArr=[String]()
     var buttonTapped=false
     var flagR=0
+    let classifier = TweetSentimentClassifier()
+    
     let swifter = Swifter(consumerKey:Constants.API_KEY,consumerSecret:Constants.API_SECRET)
     @IBOutlet weak var content: UITableView!
     @IBOutlet weak var cityLbl: UITextField!
@@ -26,9 +29,13 @@ class ViewController: UIViewController {
         swifter.searchTweet(using: "Covid India",lang:"en",count:20,tweetMode: .extended, success:{(results,metadata)in
             self.resultArr.removeAll()
             self.uriArr.removeAll()
-            for i in (0...19){
-                self.resultArr.append(results[i]["full_text"].string ?? "no result")
-                self.uriArr.append(results[i]["id_str"].string ?? " ")
+            for i in (0...50){
+                let prediction = try! self.classifier.prediction(text: results[i]["full_text"].string ?? "angry")
+                if(prediction.label=="Pos"||prediction.label=="Neutral"){
+                self.resultArr.append(results[i]["full_text"].string ?? "error loading")
+                    self.uriArr.append(results[i]["id_str"].string ?? " ")
+                    
+                }
             }
             if let tweet=results[0]["full_text"].string{
                 self.content.reloadData()
@@ -57,9 +64,13 @@ class ViewController: UIViewController {
         swifter.searchTweet(using: "oxygen cylinder available \(cityLbl.text!)",lang:"en",count:20,tweetMode: .extended, success:{(results,metadata)in
             self.resultArr.removeAll()
             self.uriArr.removeAll()
-            for i in (0...19){
-                self.resultArr.append(results[i]["full_text"].string ?? "no result")
-                self.uriArr.append(results[i]["id_str"].string ?? " ")
+            for i in (0...50){
+                let prediction = try! self.classifier.prediction(text: results[i]["full_text"].string ?? "angry")
+                if(prediction.label=="Pos"||prediction.label=="Neutral"){
+                self.resultArr.append(results[i]["full_text"].string ?? "error loading")
+                    self.uriArr.append(results[i]["id_str"].string ?? " ")
+                    
+                }
             }
             if let tweet=results[0]["full_text"].string{
                 self.content.reloadData()
@@ -80,9 +91,13 @@ class ViewController: UIViewController {
         swifter.searchTweet(using: "vaccines available \(cityLbl.text!)",lang:"en",count:20,tweetMode: .extended, success:{(results,metadata)in
             self.resultArr.removeAll()
             self.uriArr.removeAll()
-            for i in (0...19){
-                self.resultArr.append(results[i]["full_text"].string ?? "no result")
-                self.uriArr.append(results[i]["id_str"].string ?? " ")
+            for i in (0...50){
+                let prediction = try! self.classifier.prediction(text: results[i]["full_text"].string ?? "angry")
+                if(prediction.label=="Pos"||prediction.label=="Neutral"){
+                self.resultArr.append(results[i]["full_text"].string ?? "error loading")
+                    self.uriArr.append(results[i]["id_str"].string ?? " ")
+                    
+                }
             }
             if let tweet=results[0]["full_text"].string{
                 self.content.reloadData()
@@ -103,9 +118,13 @@ class ViewController: UIViewController {
         swifter.searchTweet(using: "icu rooms available \(cityLbl.text!)",lang:"en",count:20,tweetMode: .extended, success:{(results,metadata)in
             self.resultArr.removeAll()
             self.uriArr.removeAll()
-            for i in (0...19){
-                self.resultArr.append(results[i]["full_text"].string ?? "no result")
-                self.uriArr.append(results[i]["id_str"].string ?? " ")
+            for i in (0...50){
+                let prediction = try! self.classifier.prediction(text: results[i]["full_text"].string ?? "angry")
+                if(prediction.label=="Pos"||prediction.label=="Neutral"){
+                self.resultArr.append(results[i]["full_text"].string ?? "error loading")
+                    self.uriArr.append(results[i]["id_str"].string ?? " ")
+                    
+                }
             }
             if let tweet=results[0]["full_text"].string{
                 self.content.reloadData()

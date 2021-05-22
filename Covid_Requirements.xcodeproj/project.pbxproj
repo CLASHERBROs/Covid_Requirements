@@ -18,6 +18,7 @@
 		4C1B30D32634052A0028EA59 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1B30C3263404DA0028EA59 /* SwifteriOS.framework */; };
 		4C1B30D42634052A0028EA59 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1B30C3263404DA0028EA59 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C1B30DD26340DF30028EA59 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C1B30DC26340DF30028EA59 /* keys.plist */; };
+		4C3AE8AA26597B3B00888A30 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AE8A426597B3B00888A30 /* TweetSentimentClassifier.mlmodel */; };
 		4C6866CF2635651F0053006B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6866CE2635651F0053006B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		4C1B30AB263402310028EA59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1B30BA263404DA0028EA59 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = ../Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		4C1B30DC26340DF30028EA59 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		4C3AE8A426597B3B00888A30 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TweetSentimentClassifier.mlmodel; path = ../../../../../Downloads/TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		4C6866CE2635651F0053006B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 		4C1B3086263402300028EA59 /* Covid_Requirements */ = {
 			isa = PBXGroup;
 			children = (
+				4C3AE8A426597B3B00888A30 /* TweetSentimentClassifier.mlmodel */,
 				4C1B3087263402300028EA59 /* AppDelegate.swift */,
 				4C1B3089263402300028EA59 /* SceneDelegate.swift */,
 				4C1B308B263402300028EA59 /* ViewController.swift */,
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1B308C263402300028EA59 /* ViewController.swift in Sources */,
+				4C3AE8AA26597B3B00888A30 /* TweetSentimentClassifier.mlmodel in Sources */,
 				4C1B3088263402300028EA59 /* AppDelegate.swift in Sources */,
 				4C1B308A263402300028EA59 /* SceneDelegate.swift in Sources */,
 				4C6866CF2635651F0053006B /* Constants.swift in Sources */,
