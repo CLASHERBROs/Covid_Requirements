@@ -3,6 +3,7 @@
 ## About Covid_Requirements
 
 **Covid_Requirements** is an iOS app it uses twitter API to fetch relevant information regarding oxygen cylinders, covid vaccine and availability of hospital rooms in proximity of user's city.
+Tweets are filtered using a pre made ML model which displays only relevant tweet.
 
 ## Screenshots
 
